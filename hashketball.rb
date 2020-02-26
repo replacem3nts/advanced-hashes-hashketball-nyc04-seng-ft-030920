@@ -145,7 +145,7 @@ def player_lookup(player, stat = nil)
   !stat ? p_stats : p_stats[stat]
 end
 
-# builds summary array with team names as keys, colors, and "pass" key that can drive roster method above
+# builds summary array with team names as keys, hashes contain colors and "pass" key that can drive roster method above
 def game_info
   result = {}
   x = 1
