@@ -215,14 +215,13 @@ def winning_team
 end
 
 def player_with_longest_name
-  mps = roster.reduce(nil) do |memo, n|
-          memo = roster[0][:player_name] if !memo
-          if n[:player_name].length > memo.length
-            memo = n[:player_name]
-          end
-          memo
-        end
-  mps
+  roster.reduce(nil) do |memo, n|
+    memo = roster[0][:player_name] if !memo
+    if n[:player_name].length > memo.length
+      memo = n[:player_name]
+    end
+    memo
+  end
 end
 
 def long_name_steals_a_ton?
