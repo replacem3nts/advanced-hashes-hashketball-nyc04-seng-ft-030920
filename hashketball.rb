@@ -197,7 +197,7 @@ def player_numbers(team)
 end
 
 def player_stats(player)
-  player_lookup(player, nil)
+  player_lookup(player)
 end
 
 def big_shoe_rebounds
