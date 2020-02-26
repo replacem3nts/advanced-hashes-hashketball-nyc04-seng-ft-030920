@@ -126,7 +126,7 @@ def game_hash
   gh
 end
 
-# access player array of (nil) = all players, (1) = home players, (2 || other) = away players
+# access player array of (nil) = all players, (1) = home players, (2) = away players
 def roster(num = nil)
   h = game_hash[:home][:players]
   a = game_hash[:away][:players]
