@@ -140,9 +140,9 @@ end
 #   if no stat type given, returns entire player stat line (minus name)
 def player_lookup(player, stat = nil)
   player_loc = roster.find_index {|n| n[:player_name] == player}
-  all_stat = roster[player_loc]
-  all_stat.delete(:player_name)
-  !stat ? all_stat : all_stat[stat]
+  p_stats = roster[player_loc]
+  p_stats.delete(:player_name)
+  !stat ? p_stats : p_stats[stat]
 end
 
 # builds summary array with team names as keys, colors, and "pass" key that can drive roster method above
