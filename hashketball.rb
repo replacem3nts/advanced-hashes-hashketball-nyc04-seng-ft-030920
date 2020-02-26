@@ -138,7 +138,7 @@ end
 
 # returns a specified stat given player name and stat type
 #   if no stat type given, returns entire player stat line (minus name)
-def player_lookup(player, stat)
+def player_lookup(player, stat = nil)
   player_loc = roster.find_index {|n| n[:player_name] == player}
   all_stat = roster[player_loc]
   all_stat.delete(:player_name)
